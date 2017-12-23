@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
   </head>
 
@@ -13,9 +14,51 @@
     <div class="modal is-active">
       <div class="modal-background"></div>
       <div class="modal-content">
-        <h1>Modal</h1>
+        <article class="message is-info">
+          <div class="message-header">
+            <p>UCSD Campus Marketing</p>
+          </div>
+          <div class="modal-padding">
+            <div class="field">
+              <label class="label">Department</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Department..." value="">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user"></i>
+                </span>
+                <span class="icon is-small is-right is-invisible">
+                  <i class="fa fa-check"></i>
+                </span>
+              </div>
+              <p class="help is-success">This department is valid</p>
+              <p class="help is-danger">This department is not valid</p>
+            </div>
+            <div class="field">
+              <label class="label">Year</label>
+              <div class="select">
+                <select>
+                  <option>Select academic year</option>
+                  <option>2017 - 2018</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Term</label>
+              <div class="select">
+                <select>
+                  <option>Select term</option>
+                  <option>Fall</option>
+                  <option>Winter</option>
+                  <option>Spring</option>
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <button class="button is-primary" disabled>Search</button>
+            </div>
+          </div>
+        </article>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
     </div>
     <div class="container">
       <div class="notification">
