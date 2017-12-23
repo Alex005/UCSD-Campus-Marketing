@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+
   </head>
 
   <body>
@@ -22,7 +23,7 @@
             <div class="field">
               <label class="label">Department</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Department..." value="">
+                <input class="input" type="text" placeholder="Department..." id="dept_text">
                 <span class="icon is-small is-left">
                   <i class="fa fa-user"></i>
                 </span>
@@ -30,31 +31,30 @@
                   <i class="fa fa-check"></i>
                 </span>
               </div>
-              <p class="help is-success">This department is valid</p>
-              <p class="help is-danger">This department is not valid</p>
+              <p class="help is-success" id="dept_valid">This department is valid</p>
+              <p class="help is-danger" id="dept_invalid">This department is not valid</p>
             </div>
             <div class="field">
               <label class="label">Year</label>
               <div class="select">
-                <select>
+                <select id="year_select">
                   <option>Select academic year</option>
-                  <option>2017 - 2018</option>
                 </select>
               </div>
             </div>
             <div class="field">
               <label class="label">Term</label>
               <div class="select">
-                <select>
+                <select id="term_select">
                   <option>Select term</option>
-                  <option>Fall</option>
-                  <option>Winter</option>
-                  <option>Spring</option>
+                  <option value="FA">Fall</option>
+                  <option value="WI">Winter</option>
+                  <option value="SP">Spring</option>
                 </select>
               </div>
             </div>
             <div class="control">
-              <button class="button is-primary" disabled>Search</button>
+              <button class="button is-primary" id="search_btn">Search</button>
             </div>
           </div>
         </article>
@@ -66,8 +66,9 @@
       </div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="js/" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script data-main="js/site" src="js/require.js"></script>
+    <script src="js/site.js" type="text/javascript"></script>
   </body>
 
 </html>
